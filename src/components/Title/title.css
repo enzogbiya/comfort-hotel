@@ -1,0 +1,97 @@
+.title {
+	position: relative;
+	font-family: "Montserrat";
+	font-weight: 800;
+}
+
+.title h2 {
+	color: var(--dark);
+	font-size: 56px;
+	letter-spacing: 0.05em;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.title .bg-text {
+	display: block;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 130px;
+	letter-spacing: 0.17em;
+	line-height: 1.5;
+	text-transform: uppercase;
+	text-align: center;
+	width: 100%;
+	z-index: -1;
+	color: var(--purple);
+	opacity: 0.1;
+}
+
+.title.medium-bg-text .bg-text {
+	font-size: 100px;
+}
+
+@media only screen and (max-width: 1200px) {
+	.title .bg-text {
+		font-size: 100px;
+	}
+
+	.title.medium-bg-text .bg-text {
+		font-size: 76px;
+	}
+}
+
+@media only screen and (max-width: 992px) {
+	.title h2 {
+		font-size: 48px;
+	}
+	.title .bg-text {
+		font-size: 75px;
+	}
+
+	.title.medium-bg-text .bg-text {
+		font-size: 60px;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	.title h2 {
+		font-size: 40px;
+	}
+	.title .bg-text {
+		font-size: 58px;
+	}
+
+	.title.medium-bg-text .bg-text {
+		font-size: 40px;
+	}
+}
+
+@media only screen and (max-width: 576px) {
+	.title h2 {
+		font-size: 32px;
+	}
+	.title .bg-text {
+		font-size: 45px;
+	}
+}
+
+@media only screen and (max-width: 360px) {
+	.title h2 {
+		font-size: 20px;
+	}
+
+	.title .bg-text {
+		font-size: 32px;
+	}
+
+	.title.medium-bg-text h2 {
+		font-size: 15px;
+	}
+
+	.title.medium-bg-text .bg-text {
+		font-size: 27px;
+	}
+}

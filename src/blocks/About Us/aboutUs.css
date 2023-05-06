@@ -1,0 +1,35 @@
+.about-us {
+	text-align: center;
+}
+
+.about-us.description {
+	font-family: "Montserrat";
+	font-weight: 500;
+	font-size: 24px;
+	letter-spacing: 0.05em;
+}
+
+@media only screen and (max-width: 360px) {
+	.about-us {
+		margin-top: 50px !important;
+		margin-bottom: 50px !important;
+	}
+
+	.about-us .image-with-description {
+		margin-top: 20px !important;
+	}
+
+	.about-us .description {
+		margin-top: 20px;
+		font-size: 10px;
+	}
+
+	.about-us .button.primary {
+		margin-top: 25px;
+		margin-bottom: 20px;
+	}
+
+	.about-us .highlighted-text {
+		font-size: 10px;
+	}
+}

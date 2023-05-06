@@ -1,0 +1,258 @@
+.modal {
+	position: fixed;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, 0.5);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 999;
+}
+
+.modal-content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	max-width: 1070px;
+	width: 100%;
+	background: var(--light-gray);
+	border-radius: 70px;
+	padding: 110px 55px 55px 35px;
+	-webkit-box-shadow: 0px 10px 50px 5px #f4b16b;
+	box-shadow: 0px 5px 50px 10px #f4b16b;
+}
+
+.modal.feedback .modal-content {
+	padding-top: 55px;
+}
+
+.modal-body {
+	margin-top: 56px;
+}
+
+.title-icon,
+.title-icon img {
+	width: 73px;
+	height: 72px;
+	border-radius: 0;
+	object-fit: fill;
+}
+
+.modal-header {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.modal-title {
+	position: relative;
+	display: flex;
+}
+
+.modal-header .title-icon.review {
+	position: absolute;
+	right: -95px;
+	top: -25px;
+}
+
+.modal-header .title-icon.feedback {
+	position: absolute;
+	right: -95px;
+}
+
+.modal-header .title {
+	font-family: "Montserrat";
+	font-style: italic;
+	font-weight: 700;
+	font-size: 32px;
+	line-height: 39px;
+	text-align: center;
+	letter-spacing: 0.05em;
+	display: flex;
+	align-items: center;
+	gap: 30px;
+	color: var(--dark);
+}
+
+.modal-header .highlighted {
+	font-family: "TT Supermolot Neue Bold";
+	font-size: 48px;
+	line-height: 55px;
+	letter-spacing: 0.05em;
+	color: var(--orange);
+}
+
+.modal-body .d-f {
+	gap: 20px;
+}
+
+.modal-body .d-f + .d-f {
+	margin-top: 30px;
+}
+
+.modal-input {
+	font-family: "Play Regular";
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 23px;
+	text-align: center;
+	letter-spacing: 0.05em;
+	min-width: 384px;
+	width: 100%;
+}
+
+.modal-input input {
+	width: 100%;
+	background: transparent;
+	border: 2px solid #683a5f;
+	padding: 20px 0 21px 17px;
+	border-radius: 15px;
+	color: var(--purple);
+}
+
+.modal-input input::placeholder {
+	color: var(--purple);
+}
+
+.modal-input .textarea {
+	min-height: 160px;
+}
+
+.modal-footer {
+	margin-top: 80px;
+}
+
+.modal-footer .button {
+	position: relative;
+	font-family: "Montserrat";
+	font-style: italic;
+	font-weight: 800;
+	font-size: 32px;
+	line-height: 39px;
+	letter-spacing: 0.025em;
+	color: var(--purple);
+	transition: all 0.3s ease-in-out;
+	z-index: 2;
+}
+
+.modal-footer .button:hover {
+	color: #9e7496;
+}
+
+.modal-footer .button:after {
+	position: absolute;
+	content: "";
+	width: 187px;
+	height: 109px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background: #f4b16b;
+	filter: blur(50px);
+	z-index: -1;
+}
+
+@media only screen and (max-width: 360px) {
+	.modal {
+		padding: 165px 16px;
+	}
+
+	.modal-content {
+		border-radius: 40px;
+		padding: 30px 40px 45px;
+		max-width: 330px;
+	}
+
+	.modal-header .title {
+		font-size: 20px;
+		line-height: 24px;
+		letter-spacing: 0.05em;
+		gap: 7px;
+	}
+
+	.modal-header {
+		gap: 12px;
+	}
+
+	.modal-content .modal-header .title-icon {
+		position: relative;
+		right: 0;
+		top: 0;
+	}
+
+	.modal-title {
+		display: flex;
+		align-items: flex-end;
+		gap: 6px;
+	}
+
+	.modal-header .title.sm {
+		font-size: 16px;
+	}
+
+	.modal-header .highlighted {
+		font-size: 24px;
+		line-height: 28px;
+	}
+
+	.modal-body {
+		margin-top: 20px;
+	}
+
+	.modal-body .d-f {
+		flex-direction: column;
+	}
+
+	.modal-input {
+		min-width: unset;
+		width: max-content;
+	}
+
+	.modal-input input {
+		padding: 0;
+		padding-left: 12px;
+		padding-bottom: 5px;
+	}
+
+	.modal-input .textarea {
+		min-height: 100px;
+	}
+
+	.modal-input input::placeholder {
+		font-size: 10px;
+		line-height: 12px;
+		letter-spacing: 0.05em;
+	}
+
+	.title-icon,
+	.title-icon img {
+		width: 43px;
+		height: 46px;
+	}
+
+	.modal-footer {
+		margin-top: 30px;
+	}
+
+	.modal-footer .button {
+		font-size: 20px;
+		line-height: 24px;
+		letter-spacing: 0.025em;
+	}
+
+	.modal-footer .button:after {
+		width: 104px;
+		height: 58px;
+		filter: blur(25px);
+	}
+
+	.modal-body .d-f + .d-f {
+		margin-top: 10px;
+	}
+
+	.modal-body .d-f {
+		gap: 10px;
+	}
+}

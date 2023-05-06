@@ -1,0 +1,143 @@
+.contacts-row {
+	display: flex;
+	justify-content: flex-end;
+	padding-left: 15px;
+}
+
+.contacts .contacts-map {
+	text-align: right;
+}
+
+.contacts .contacts-info {
+	font-family: "Montserrat";
+	font-weight: 700;
+	font-size: 32px;
+	line-height: 40px;
+	text-align: center;
+	color: #fff;
+	background: linear-gradient(180deg, #683a5f 0%, #845c7c 100%);
+	border-radius: var(--border-radius);
+	padding: 105px 115px 95px;
+	width: max-content;
+	box-shadow: 6px 9px 11px rgba(0, 0, 0, 0.25);
+}
+
+.contacts-line {
+	background: var(--purple);
+	width: 40%;
+	height: 5px;
+}
+
+.contact-us {
+	position: relative;
+	line-height: 40px;
+	letter-spacing: 0.11em;
+	z-index: 2;
+}
+
+.contact-us::before {
+	position: absolute;
+	content: "";
+	top: 50%;
+	left: 80px;
+	transform: translate(-50%, -50%);
+	width: 260px;
+	height: 165px;
+	background: var(--orange);
+	filter: blur(75px);
+	z-index: -1;
+}
+
+@media only screen and (min-width: 1400px) {
+	.contacts-row {
+		justify-content: center;
+		gap: 115px;
+		padding-left: 15px;
+	}
+
+	.contacts .contacts-map {
+		text-align: unset;
+	}
+
+	.contacts-info-wrapper {
+		justify-content: flex-end !important;
+	}
+}
+
+@media only screen and (max-width: 1200px) {
+	.contacts-row {
+		padding-left: 15px;
+		gap: 50px;
+	}
+	.contacts .contacts-info {
+		font-size: 28px;
+		padding: calc(105px * 0.6) calc(115px * 0.6) calc(95px * 0.6);
+	}
+
+	.contacts .contacts-map {
+		text-align: center;
+	}
+}
+
+@media only screen and (max-width: 992px) {
+	.contacts-row {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.contacts .contacts-info {
+		font-size: 30px;
+		padding: calc(105px * 0.8) calc(115px * 0.8) calc(95px * 0.8);
+	}
+}
+
+@media only screen and (max-width: 572px) {
+	.contacts .contacts-info {
+		font-size: 22px;
+		padding: calc(105px * 0.3) calc(115px * 0.3) calc(95px * 0.3);
+	}
+
+	.contacts-row {
+		padding-left: 0;
+	}
+
+	.contacts-map iframe {
+		max-width: 100%;
+	}
+}
+
+@media only screen and (max-width: 360px) {
+	.contacts {
+		padding-bottom: 30px !important;
+	}
+
+	.contacts .title {
+		margin-bottom: 35px;
+	}
+
+	.contacts .contacts-info {
+		padding: 24px 46px 43px;
+		font-size: 16px;
+		line-height: 20px;
+		letter-spacing: 0.11em;
+	}
+
+	.contacts-info li + li {
+		margin-top: 5px;
+	}
+
+	.contacts-line {
+		width: 75%;
+		height: 2px;
+	}
+
+	button.contact-us {
+		margin-top: 40px;
+	}
+
+	.contact-us::before {
+		width: 120px;
+		height: 77px;
+		filter: blur(25px);
+	}
+}

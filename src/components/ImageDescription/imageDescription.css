@@ -1,0 +1,192 @@
+.image-with-description {
+	display: flex;
+	align-items: center;
+	gap: 100px;
+}
+
+.image-with-description.reverse {
+	flex-direction: row-reverse;
+}
+
+.image-with-description + .image-with-description {
+	margin-top: 100px;
+}
+
+.image-with-description img {
+	max-height: 460px;
+	object-fit: cover;
+	width: 100%;
+	border-radius: var(--border-radius);
+}
+
+.image-with-description .description {
+	font-family: "Montserrat";
+	font-weight: 500;
+	font-size: 24px;
+	letter-spacing: 0.05em;
+}
+
+.image-with-description .description ul {
+	font-weight: 700;
+	text-align: left;
+
+	color: var(--purple);
+}
+
+.image-with-description .description li {
+	line-height: 36px;
+}
+.image-with-description .description li + li {
+	margin-top: 10px;
+}
+
+.image-with-description .description-title {
+	font-style: italic;
+	font-weight: 700;
+	font-size: 40px;
+	line-height: 50px;
+	text-transform: uppercase;
+	margin-bottom: 25px;
+}
+
+.image-with-description.description-title-sm .description-title {
+	font-size: 32px;
+}
+
+.image-with-description.full-width {
+	gap: 50px;
+}
+
+.image-with-description.full-width.no-reverse {
+	padding-right: 60px;
+}
+
+.image-with-description.full-width.reverse {
+	padding-left: 60px;
+}
+
+.image-with-description.full-width .image-container {
+	width: 100%;
+	height: 100%;
+}
+
+.image-with-description.full-width.no-reverse .image-container {
+	border-top-right-radius: var(--border-radius);
+	border-bottom-right-radius: var(--border-radius);
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+}
+
+.image-with-description.full-width.reverse .image-container {
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+	border-top-left-radius: var(--border-radius);
+	border-bottom-left-radius: var(--border-radius);
+}
+
+.image-with-description.full-width img {
+	min-height: 650px;
+	min-width: 880px;
+	object-fit: cover;
+}
+
+.image-with-description.full-width.no-reverse img {
+	border-top-right-radius: var(--border-radius);
+	border-bottom-right-radius: var(--border-radius);
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+}
+
+.image-with-description.full-width.reverse img {
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+	border-top-left-radius: var(--border-radius);
+	border-bottom-left-radius: var(--border-radius);
+}
+
+@media only screen and (max-width: 768px) {
+	.image-with-description img {
+		width: 95%;
+	}
+
+	.about-us .description {
+		font-size: 16px;
+	}
+}
+
+@media only screen and (max-width: 992px) {
+	.image-with-description .description-title {
+		font-size: 35px;
+	}
+
+	.image-with-description .description {
+		font-size: 22px;
+	}
+	.about-us .description {
+		font-size: 22px;
+	}
+
+	.image-with-description {
+		gap: 50px;
+		flex-direction: column;
+	}
+
+	.image-with-description.reverse {
+		flex-direction: column;
+	}
+
+	.image-with-description.full-width.no-reverse {
+		padding: 0;
+	}
+
+	.image-with-description.full-width.reverse {
+		padding: 0;
+	}
+
+	.image-with-description.full-width.reverse .image-container,
+	.image-with-description.full-width.reverse .image-container img {
+		border-radius: 0;
+	}
+
+	.image-with-description.full-width.no-reverse .image-container,
+	.image-with-description.full-width.no-reverse .image-container img {
+		border-radius: 0;
+	}
+}
+
+@media only screen and (max-width: 360px) {
+	.image-with-description.full-width {
+		gap: 20px;
+	}
+	.image-with-description {
+		gap: 20px;
+	}
+	.image-with-description .description-title {
+		line-height: 24px;
+	}
+
+	.image-with-description .description {
+		margin-top: unset !important;
+		font-size: 12px !important;
+	}
+
+	.image-with-description li {
+		line-height: 21px !important;
+	}
+
+	.image-with-description .description li + li {
+		margin-top: 3px;
+	}
+
+	.image-with-description.full-width img {
+		width: 100%;
+		min-height: unset;
+		min-width: unset;
+	}
+
+	.image-with-description .description-title,
+	.image-with-description.description-title-sm .description-title {
+		font-size: 20px;
+		margin-bottom: 15px;
+	}
+}

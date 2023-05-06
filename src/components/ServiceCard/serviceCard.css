@@ -1,0 +1,65 @@
+.service-card {
+	font-family: "Montserrat";
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 20px;
+	padding: 42px 36px 40px;
+	background: #fff;
+	box-shadow: 16px 16px 17px rgba(0, 0, 0, 0.25);
+	border-radius: var(--button-radius);
+	max-width: 448px;
+	height: max-content;
+}
+
+.service-card-title {
+	font-style: italic;
+	font-weight: 600;
+	line-height: 49px;
+	text-align: center;
+	font-size: 40px;
+	width: 370px;
+	padding: 28px 0;
+	border-radius: var(--button-radius);
+}
+
+.service-card-title.m {
+	font-size: 32px;
+}
+
+.service-card-description {
+	color: var(--dark);
+	font-weight: 400;
+	font-size: 24px;
+	line-height: 117.4%;
+	letter-spacing: 0.05em;
+}
+
+@media only screen and (max-width: 360px) {
+	.service-card {
+		padding: 9px 21px 15px 17px;
+		gap: 10px;
+	}
+	.service-card-title {
+		font-size: 16px;
+		width: 180px;
+		padding: 13px 0 12px;
+		line-height: 20px;
+	}
+
+	.service-card-description {
+		width: 180px;
+	}
+
+	.service-card-title.m {
+		font-size: 13px;
+	}
+
+	.service-card-description {
+		font-size: 10px;
+		line-height: 12px;
+
+		letter-spacing: 0.05em;
+	}
+}

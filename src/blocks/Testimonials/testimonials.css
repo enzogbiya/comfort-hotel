@@ -1,0 +1,52 @@
+.testimonials .more-reviews {
+	max-width: 1250px;
+	display: flex;
+	justify-content: flex-end;
+}
+
+.testimonials .more-reviews .button-text {
+	font-size: 24px;
+}
+
+.testimonials .reviews-column .d-f {
+	flex-direction: column;
+	align-items: center;
+	gap: 30px;
+}
+
+.testimonials .reviews-column .testimonial {
+	transform: rotate(0deg) !important;
+}
+
+.reviews-column .d-f .small-review:not(:last-child) {
+	width: 100%;
+}
+
+.reviews-column .d-f .small-review:not(:first-child),
+.reviews-column .d-f .large-review {
+	display: none;
+}
+
+.testimonials .reviews-column .more-reviews {
+	margin-top: 40px;
+	justify-content: center;
+}
+
+@media only screen and (max-width: 360px) {
+	.testimonials {
+		padding-bottom: 60px !important;
+	}
+
+	.testimonials .reviews {
+		margin-top: 30px;
+	}
+
+	.testimonials .more-reviews .button-text {
+		font-size: 10px;
+	}
+
+	.more-reviews .button.secondary .arrow-right,
+	.button.secondary .arrow-right img {
+		max-width: 17px;
+	}
+}

@@ -1,0 +1,116 @@
+.conference-rooms .swiper {
+	text-align: center;
+	max-height: 80%;
+	width: 100%;
+}
+
+.conference-rooms .rooms-description {
+	font-family: "Montserrat";
+	font-weight: 500;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.rooms-description .room-name {
+	font-size: 32px;
+	line-height: 102.1%;
+	letter-spacing: -0.02em;
+}
+
+.rooms-description .room-square {
+	font-size: 20px;
+	letter-spacing: -0.015em;
+}
+
+.room-equipment,
+.room-service {
+	font-size: 24px;
+	font-weight: 500;
+}
+
+.room-equipment h4,
+.room-service h4 {
+	font-weight: 500;
+	color: var(--orange);
+}
+
+.conference-rooms .image img {
+	object-fit: cover;
+}
+
+.swiper-pagination .swiper-pagination-bullet {
+	border: 2px solid var(--purple);
+	background: var(--light-gray);
+	opacity: 1;
+}
+
+.swiper-pagination .swiper-pagination-bullet-active {
+	background: var(--purple);
+}
+
+.swiper-button-prev {
+	left: 20px;
+	background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23e1e3e8'%2F%3E%3C%2Fsvg%3E") !important;
+}
+
+.swiper-button-next {
+	right: 20px;
+	background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23e1e3e8'%2F%3E%3C%2Fsvg%3E") !important;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+	content: "";
+}
+
+@media only screen and (max-width: 1200px) {
+	.conference-rooms .swiper {
+		max-height: 650px;
+	}
+}
+
+@media only screen and (max-width: 360px) {
+	.conference-rooms {
+		padding-bottom: 60px !important;
+	}
+
+	.conference-rooms .swiper {
+		max-height: 160px;
+	}
+
+	.conference-rooms .swiper .image img {
+		max-height: 160px;
+	}
+
+	.swiper-pagination .swiper-pagination-bullet {
+		width: 10px;
+		height: 10px;
+	}
+
+	.rooms-description {
+		margin-top: 30px !important;
+	}
+
+	.rooms-description .room-name {
+		font-size: 16px;
+	}
+
+	.rooms-description .room-square {
+		font-size: 10px;
+	}
+
+	.room-equipment {
+		font-size: 10px;
+	}
+
+	.room-service {
+		font-size: 10px;
+	}
+
+	.swiper-button-next,
+	.swiper-button-prev {
+		max-width: 20px;
+		max-height: 30px;
+	}
+}

@@ -1,0 +1,69 @@
+@font-face {
+	font-family: "TT Supermolot Neue DemiBold";
+	src: url("../fonts/TT Supermolot Neue/TTSupermolotNeue-CondDBold.ttf");
+}
+
+@font-face {
+	font-family: "TT Supermolot Neue Bold";
+	src: url("../fonts/TT Supermolot Neue/TTSupermolotNeue-CondBold.ttf");
+}
+
+@font-face {
+	font-family: "Times Regular";
+	src: url("../fonts/Times/Times Regular.ttf");
+}
+
+@font-face {
+	font-family: "Play Regular";
+	src: url("../fonts/Play/Play-Regular.ttf");
+}
+
+* {
+	--light-gray: #e1e3e8;
+	--dark: #2e323f;
+	--purple: #683a5f;
+	--orange: #f4b16b;
+	--border-radius: 50px;
+	--button-radius: 30px;
+	--button-hover-color: #ffc589;
+	--swiper-pagination-color: var(--purple);
+	--swiper-pagination-bullet-size: 20px;
+	--swiper-pagination-bullet-inactive-color: transparent;
+}
+
+body {
+	background-color: var(--light-gray);
+	overflow-x: hidden;
+}
+
+.container {
+	margin: 0 auto;
+	max-width: 1445px;
+	padding: 0 15px;
+}
+
+.image-container {
+	transition: all 0.3s ease-in-out;
+	overflow: hidden;
+}
+
+img {
+	transition: all 0.3s ease-in-out;
+}
+
+.image-container:hover img {
+	transform: scale(1.1);
+}
+
+.line {
+	background: var(--purple);
+	width: 40%;
+	height: 5px;
+}
+
+@media only screen and (max-width: 360px) {
+	.line {
+		width: 75%;
+		height: 2px;
+	}
+}

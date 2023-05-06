@@ -1,0 +1,58 @@
+.button.primary {
+	position: relative;
+	display: inline-block;
+	font-family: "Montserrat";
+	font-weight: 700;
+	font-size: 24px;
+	max-width: 294px;
+	padding: 10px 45px;
+	border-radius: var(--button-radius);
+	color: var(--light-gray);
+	background: var(--orange);
+	transition: all 0.3s ease-in-out;
+	filter: drop-shadow(4px 6px 7px rgba(0, 0, 0, 0.25));
+	z-index: 9;
+	cursor: pointer;
+}
+
+.button.primary:hover {
+	background: var(--button-hover-color);
+}
+
+.button-wrapper {
+	position: relative;
+}
+
+.button-bg-flash {
+	position: absolute;
+	content: "";
+	width: 230px;
+	height: 205px;
+	background: #683a5f;
+	right: 20px;
+	top: 50%;
+	transform: translateY(-50%);
+	z-index: -1;
+	filter: blur(100px);
+}
+
+@media only screen and (max-width: 576px) {
+	.button-bg-flash {
+		width: 115px;
+		height: 100px;
+		filter: blur(70px);
+	}
+}
+
+@media only screen and (max-width: 360px) {
+	.button.primary {
+		font-size: 12px;
+		padding: 8px 30px;
+	}
+
+	.button-bg-flash {
+		width: 81px;
+		height: 74px;
+		filter: blur(35px);
+	}
+}
